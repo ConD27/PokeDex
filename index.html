@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <main>
+      <h1>Pokédex</h1>
+      <div id="pokemon-display">
+        <h2 id="pokemon-name">Bulbasaur</h2>
+        <div id="pokemon-selector">
+          <button id="previous-pokemon" class="button-click" role="button">Anterior</button>
+          <img id="pokemon-sprite" class="img-button" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="sprite">
+          <button id="next-pokemon" class="button-click" role="button">Siguiente</button>
+        </div>
+        <div id="type-display">
+          <label id="type-1" class="type-label">Planta</label>
+          <label id="type-2" class="type-label">Veneno</label>
+        </div>
+
+        <form id="search-form">
+        <input id="search-by-name" type="text" placeholder="Pokémon a buscar">
+        <button class="button-click" >Buscar</button>
+      </form>
+      </div>
+      
+  <!-- Ventana modal, por defecto no visiblel -->
+      <div id="ventanaModal" class="modal">
+        <div id="modal-window" class="modal-content">
+          <div class="window-sprite-column">
+            <img id="window-sprite" src="" alt="">
+          </div>
+          <div class="description-column">
+            
+            <h2 id="window-title"></h2>
+            <p>Habilidad: <span id="ability"></span> </p>
+            <h3>Estadísticas</h3>
+            <ul>
+              <li class="stat-list">HP: </li> <span id="h-p">--</span> <div id="hp-bar" class="stat-bar"></div> 
+              <li class="stat-list">Ataque: </li> <span id="atk">--</span><div id="atk-bar" class="stat-bar"></div>
+              <li class="stat-list">Defensa: </li><span id="def">--</span><div id="def-bar" class="stat-bar"></div> 
+              <li class="stat-list">Atq. Sp: </li><span id="sp-atk">--</span><div id="sp-atk-bar" class="stat-bar"></div> 
+              <li class="stat-list">Def Sp: </li><span id="sp-def">--</span><div id="sp-def-bar" class="stat-bar"></div> 
+              <li class="stat-list">Velocidad: </li><span id="spd">--</span><div id="spd-bar" class="stat-bar"></div> 
+            </ul>
+          </div>
+          <span class="cerrar">&times;</span>
+        </div>
+      </div>
+
+    </main>
+  
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
